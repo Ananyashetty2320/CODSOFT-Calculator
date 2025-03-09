@@ -1,0 +1,108 @@
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the Calculator */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 400px;
+}
+
+/* Calculator Styling */
+.calculator {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Input Box */
+#inputBox {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Button Styling */
+.button {
+    background-color: #444;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:active {
+    background-color: #666;
+}
+
+/* Operator Buttons Styling */
+.operator {
+    background-color: #fe7d1a;
+}
+
+.operator:active {
+    background-color: #e96800;
+}
+
+/* Equal Button Styling */
+.equalBtn {
+    background-color: #2ecc71;
+    color: white;
+    grid-column: span 2;
+}
+
+.equalBtn:active {
+    background-color: #27ae60;
+}
+
+/* Button Layout using Grid */
+.calculator div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* Adjust the width of the calculator */
+.calculator {
+    width: 320px;
+}
+
+/* Adding Media Queries for Responsive Design */
+@media (max-width: 350px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+    .button {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+    #inputBox {
+        font-size: 1.5em;
+    }
+}
